@@ -54,7 +54,7 @@ export default {
     // 这样能让高度始终和宽度成比例
     overflow hidden
     height 0
-    padding-bottom 31.25%
+    padding-bottom 26.67%
     .swiper-img
       width 100%
 </style>
