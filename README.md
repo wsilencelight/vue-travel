@@ -53,6 +53,10 @@ www.iconfont.cn
 - git checkout branchname 切换分支
 - git status 查看当前分支
 
+## 合并分支
+- git checkout master 切换到主分支
+- git merge origin/branchname 合并分支
+- git push
 ## vue-awesome-swiper制作轮播图
 - npm install vue-awesome-swiper@2.6.7 --save
 - [网址](https://github.com/surmon-china/vue-awesome-swiper)
