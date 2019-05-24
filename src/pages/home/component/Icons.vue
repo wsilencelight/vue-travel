@@ -129,6 +129,7 @@ export default {
   .icons
     display flex
     flex-wrap wrap
+    margin-top .1rem
     .icon
       position relative
       overflow hidden
