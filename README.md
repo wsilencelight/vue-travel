@@ -34,3 +34,16 @@ For a detailed explanation on how things work, check out the [guide](http://vuej
 会在package.json中加上新的dependencies
 npm install fastclick --save
 ```
+## stylus/stylus-loader
+```
+npm install stylus/stylus-loader --save
+```
+
+## iconfont
+```
+www.iconfont.cn
+建立自己的图标库
+```
+
+## webpack.base.configg.js
+- 可以在这里面的resolve中给一个文件夹定义一个别名就像@代表src一样
