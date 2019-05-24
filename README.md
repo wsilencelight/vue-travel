@@ -47,3 +47,12 @@ www.iconfont.cn
 
 ## webpack.base.configg.js
 - 可以在这里面的resolve中给一个文件夹定义一个别名就像@代表src一样
+
+## 创建一个新的分支
+- git pull 将线上分支同步下来
+- git checkout branchname 切换分支
+- git status 查看当前分支
+
+## vue-awesome-swiper制作轮播图
+- npm install vue-awesome-swiper@2.6.7 --save
+- [网址](https://github.com/surmon-china/vue-awesome-swiper)
