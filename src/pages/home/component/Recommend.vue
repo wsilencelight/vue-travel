@@ -27,14 +27,14 @@ export default {
       },
       {
         id: '0002',
-        imgUrl: 'http://img1.qunarzz.com/sight/p0/1511/ea/eaf1bdc38aed9e6690.img.jpg_200x200_3032bf56.jpg',
-        title: '银杏湖乐园',
+        imgUrl: 'http://img1.qunarzz.com/sight/p0/1601/d4/d4f1a62140b9d93590.img.jpg_200x200_a1ff6094.jpg',
+        title: '牛首山文化旅游区',
         desc: '江宁区'
       },
       {
         id: '0003',
-        imgUrl: 'http://img1.qunarzz.com/sight/p0/1511/ea/eaf1bdc38aed9e6690.img.jpg_200x200_3032bf56.jpg',
-        title: '银杏湖乐园',
+        imgUrl: 'http://img1.qunarzz.com/sight/p0/1411/13/0cd5a9a57ae0d1b9b935ec604ce0f9bf.water.jpg_200x200_9b808f51.jpg',
+        title: '南京海底世界',
         desc: '江宁区'
       }]
     }
