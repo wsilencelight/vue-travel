@@ -60,3 +60,12 @@ www.iconfont.cn
 ## vue-awesome-swiper制作轮播图
 - npm install vue-awesome-swiper@2.6.7 --save
 - [网址](https://github.com/surmon-china/vue-awesome-swiper)
+
+## vue中使用ajax(axios)
+- npm install axios --save
+
+## 使用proxy代理功能(webpack-dev-server提供的功能)
+- 在config/index.js的开发环境中的proxyTable
+
+## 同时使用localhost和ip访问
+- 在package.json中在dev后加上"--host 0.0.0.0"

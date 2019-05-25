@@ -1,6 +1,6 @@
 <template>
   <div class="icon-main">
-    <swiper>
+    <swiper :options="swiperOption">
       <swiper-slide v-for="(page,index) of pages" :key="index">
         <div class="icons">
           <div class="icon" v-for="item in page" :key="item.id">
@@ -26,58 +26,15 @@
 <script>
 export default {
   name: 'HomeIcons',
+  props: {
+    iconList: Array
+  },
   data () {
     return {
-      iconList: [{
-        id: '0001',
-        imgUrl: 'http://img1.qunarzz.com/piao/fusion/1803/95/f3dd6c383aeb3b02.png',
-        imgText: '景点门票'
-      },
-      {
-        id: '0002',
-        imgUrl: 'http://img1.qunarzz.com/piao/fusion/1804/5a/13ceb38dcf262f02.png',
-        imgText: '一日游'
-      },
-      {
-        id: '0003',
-        imgUrl: 'http://img1.qunarzz.com/piao/fusion/1803/20/831d62d2e1c7be02.png',
-        imgText: '文化古迹'
-      },
-      {
-        id: '0004',
-        imgUrl: 'http://img1.qunarzz.com/piao/fusion/1803/97/02f5043b51b2102.png',
-        imgText: '牛首山'
-      },
-      {
-        id: '0005',
-        imgUrl: 'http://mp-piao-admincp.qunarzz.com/mp_piao_admin_mp_piao_admin/admin/20194/94f7f5bf7b0f4d238dd68d718f102f40.png',
-        imgText: '中山陵'
-      },
-      {
-        id: '0006',
-        imgUrl: 'http://mp-piao-admincp.qunarzz.com/mp_piao_admin_mp_piao_admin/admin/20194/b71c1387a921ccf9c6edc7e8def3da90.png',
-        imgText: '红山森林动物园'
-      },
-      {
-        id: '0007',
-        imgUrl: 'http://mp-piao-admincp.qunarzz.com/mp_piao_admin_mp_piao_admin/admin/20194/f6dda1876c5950d83cc159c8fd522943.png',
-        imgText: '总统府'
-      },
-      {
-        id: '0008',
-        imgUrl: 'http://img1.qunarzz.com/piao/fusion/1803/95/8246f27355943202.png',
-        imgText: '银杏湖乐园'
-      },
-      {
-        id: '0009',
-        imgUrl: 'http://img1.qunarzz.com/piao/fusion/1803/20/831d62d2e1c7be02.png',
-        imgText: '大报恩寺'
-      },
-      {
-        id: '0010',
-        imgUrl: 'http://img1.qunarzz.com/piao/fusion/1803/50/26ffa31b56646402.png',
-        imgText: '南京海底世界'
-      }]
+      swiperOption: {
+        // 禁止自动播放
+        autoplay: false
+      }
     }
   },
   computed: {

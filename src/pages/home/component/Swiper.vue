@@ -1,6 +1,6 @@
 <template>
   <div class="swiper">
-    <swiper :options="swiperOption">
+    <swiper :options="swiperOption" v-if="showSwiper">
     <!-- slides -->
     <swiper-slide v-for="(item, index) in swiperList" :key="index">
       <img class="swiper-img" :src="item.imgUrl" :alt="item.alt" />
@@ -18,28 +18,22 @@
 <script>
 export default {
   name: 'HomeSwiper',
+  props: {
+    swiperList: Array
+  },
   data () {
     return {
       swiperOption: {
         pagination: '.swiper-pagination',
         // 让轮播图可以循环
         loop: true
-      },
-      swiperList: [{
-        id: '0001',
-        imgUrl: 'http://mp-piao-admincp.qunarzz.com/mp_piao_admin_mp_piao_admin/admin/20194/b1847cf91a34cf95402240a3f62aad77.jpg_750x200_26ea3527.jpg',
-        alt: '夫子庙'
-      },
-      {
-        id: '0002',
-        imgUrl: 'http://mp-piao-admincp.qunarzz.com/mp_piao_admin_mp_piao_admin/admin/20193/3f47010a2312c32fff92fec3bcc99563.jpg_750x200_7ae774e5.jpg',
-        alt: '海洋馆'
-      },
-      {
-        id: '0003',
-        imgUrl: 'http://mp-piao-admincp.qunarzz.com/mp_piao_admin_mp_piao_admin/admin/20195/0bb0f7431bc7c499fd724bcd9000a98d.jpg_750x200_a828e320.jpg',
-        alt: '中华恐龙园'
-      }]
+      }
+    }
+  },
+  computed: {
+    showSwiper () {
+      // 解决因为一开始是空数组渲染的幻灯片导致最后出现的时候最后一张图片现显示
+      return this.swiperList.length
     }
   }
 }
