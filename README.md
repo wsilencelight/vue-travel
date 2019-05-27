@@ -69,3 +69,6 @@ www.iconfont.cn
 
 ## 同时使用localhost和ip访问
 - 在package.json中在dev后加上"--host 0.0.0.0"
+
+## better-scroll来做页面上下滚动
+- npm install better-scroll --save
