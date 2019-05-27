@@ -41,6 +41,7 @@ export default {
     getHomeInfoSucc (res) {
       // 只需要在Home获取一次数据即可,减少ajax请求
       // res中还有config,header等内容,先将data取出
+      // 取出之后的res才是json文件中的数据
       res = res.data
       if (res.ret && res.data) {
         const data = res.data
