@@ -2,8 +2,8 @@
   <div>
     <city-header></city-header>
     <city-search></city-search>
-    <city-list :cities="cities" :hotCities="hotCities"></city-list>
-    <city-alphabet :cities="cities"></city-alphabet>
+    <city-list :cities="cities" :hotCities="hotCities" :letter="letter"></city-list>
+    <city-alphabet :cities="cities" @alphabet="handleLetterChange"></city-alphabet>
   </div>
 </template>
 
@@ -26,17 +26,21 @@ export default {
       // A,B,C等对应的所有城市
       cities: {},
       // 热门城市
-      hotCities: []
+      hotCities: [],
+      // alphabet向list传的值
+      letter: ''
     }
   },
   mounted () {
     this.getCityInfo()
   },
   methods: {
+    // 发送ajax请求
     getCityInfo () {
       axios.get('api/city.json')
         .then(this.handleCityInfoSucc)
     },
+    // 处理ajax返回数据
     handleCityInfoSucc (res) {
       res = res.data
       if (res.ret && res.data) {
@@ -44,6 +48,10 @@ export default {
         this.cities = data.cities
         this.hotCities = data.hotCities
       }
+    },
+    handleLetterChange (letter) {
+      // console.log(letter)
+      this.letter = letter
     }
   }
 }

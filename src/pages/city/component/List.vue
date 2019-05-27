@@ -17,7 +17,7 @@
           </div>
         </div>
       </div>
-      <div class="area" v-for="(item, key) of cities" :key="key">
+      <div class="area" v-for="(item, key) of cities" :key="key" :ref="key">
         <div class="title border-topbottom">{{key}}</div>
         <div class="item-list" v-for="childItem of item" :key="childItem.id">
           <div class="item border-bottom">{{childItem.name}}</div>
@@ -33,10 +33,21 @@ export default {
   name: 'CityList',
   props: {
     cities: Object,
-    hotCities: Array
+    hotCities: Array,
+    letter: String
   },
   mounted () {
     this.scroll = new Bscroll(this.$refs.warpper)
+  },
+  watch: {
+    letter () {
+      if (this.letter) {
+        // v-for循环出来导致得到的其实是一个数组，不是标准dom元素,可以用[0]
+        const element = this.$refs[this.letter][0]
+        // 滚到某个元素
+        this.scroll.scrollToElement(element)
+      }
+    }
   }
 }
 </script>
