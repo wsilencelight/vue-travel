@@ -5,7 +5,9 @@
     </div>
     <div class="search-show" ref="search-show" v-show="keyword">
       <ul>
-        <li class="search-item border-bottom" v-for="item in list" :key="item.id">{{item.name}}</li>
+        <li class="search-item border-bottom"
+        v-for="item in list" :key="item.id"
+        @click="handleCityClick(item.name)">{{item.name}}</li>
         <li v-show="hasNodata" class="search-item border-bottom">没有找到匹配数据</li>
       </ul>
     </div>
@@ -24,6 +26,14 @@ export default {
       list: [],
       keyword: '',
       timer: null
+    }
+  },
+  methods: {
+    handleCityClick (city) {
+      // 用dispath向actions传递信息
+      this.$store.dispatch('changeCity', city)
+      // 编程式路由导航
+      this.$router.push('/')
     }
   },
   computed: {

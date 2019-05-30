@@ -8,7 +8,7 @@
       输入城市景点游玩主题
       </div>
       <router-link to="/city">
-        <div class="header-right">{{city}}
+        <div class="header-right">{{this.city}}
           <span class="iconfont row-font">&#xe6aa;</span>
         </div>
       </router-link>
@@ -16,10 +16,12 @@
 </template>
 
 <script>
+import { mapState } from 'vuex'
 export default {
   name: 'HomeHeader',
-  props: {
-    city: String
+  computed: {
+    // 将this.$store.state.city映射过来
+    ...mapState(['city'])
   }
 }
 </script>
@@ -30,6 +32,7 @@ export default {
 // @import '../../../assets/styles/varibles.styl'
 // @import '~@/assets/styles/varibles.styl'
   @import '~styles/varibles.styl'
+  @import '~styles/mixins.styl'
   .header
     display flex
     line-height $headerHeight
@@ -55,9 +58,11 @@ export default {
     border-radius .1rem
   .header-right
     float right
-    width 1.24rem
+    min-width 1.04rem
+    padding-left .1rem
     color #ffffff
     text-align center
+    // ellipsis()
     .row-font
       font-size .24rem
       margin-left -.06rem

@@ -72,3 +72,6 @@ www.iconfont.cn
 
 ## better-scroll来做页面上下滚动
 - npm install better-scroll --save
+
+## vuex实现数据共享
+- npm install vuex --save
