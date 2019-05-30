@@ -81,3 +81,6 @@ www.iconfont.cn
 ## window全局事件解绑
 - activated与deactivated
 - deactivated在页面变换成新的页面的时候执行
+
+## 递归组件
+- 见detail-list的使用

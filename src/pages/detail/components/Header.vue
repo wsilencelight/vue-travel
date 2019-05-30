@@ -64,6 +64,7 @@ export default {
     .back
       color #ffffff
   .header-fixed
+    z-index 2
     position fixed
     top 0
     left 0
