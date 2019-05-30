@@ -3,6 +3,7 @@ import Router from 'vue-router'
 // import HelloWorld from '@/components/HelloWorld'
 import Home from '../pages/home/Home.vue'
 import City from '@/pages/city/City.vue'
+import Detail from '@/pages/detail/Detail.vue'
 Vue.use(Router)
 
 export default new Router({
@@ -16,6 +17,11 @@ export default new Router({
       path: '/city',
       name: 'City',
       component: City
+    },
+    { // 可以用:的形式带参数传递
+      path: '/detail/:id',
+      name: 'Detail',
+      component: Detail
     }
   ]
 })

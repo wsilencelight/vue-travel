@@ -43,9 +43,11 @@ npm install stylus/stylus-loader --save
 ```
 www.iconfont.cn
 建立自己的图标库
+下载下来后.svg.ttf,eot,woff文件和iconfont.css是所需要的
+别忘了看下iconfont.css url是否正确
 ```
 
-## webpack.base.configg.js
+## webpack.base.config.js
 - 可以在这里面的resolve中给一个文件夹定义一个别名就像@代表src一样
 
 ## 创建一个新的分支
