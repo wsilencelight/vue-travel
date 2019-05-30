@@ -1,5 +1,6 @@
 <template>
   <div id="app">
+    <!-- 路由内容被加载之后放入内存，下次直接用不经过钩子函数mounted,但是会用activated -->
     <keep-alive>
       <router-view/>
     </keep-alive>

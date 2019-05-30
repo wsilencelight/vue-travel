@@ -60,7 +60,7 @@ export default {
     this.lastCity = this.city
     this.getHomeInfo()
   },
-  // 使用keepalive多出的钩子函数
+  // 使用keepalive使用的钩子函数，让city能够刷新
   activated () {
     if (this.lastCity !== this.city) {
       this.getHomeInfo()
