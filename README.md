@@ -77,3 +77,7 @@ www.iconfont.cn
 
 ## vuex实现数据共享
 - npm install vuex --save
+
+## window全局事件解绑
+- activated与deactivated
+- deactivated在页面变换成新的页面的时候执行
