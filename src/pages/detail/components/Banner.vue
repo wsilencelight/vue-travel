@@ -10,16 +10,20 @@
         </div>
       </div>
     </div>
-     <common-gallary :imgs="gallaryImgs" v-show="showGallary" @gallaryClick="handleBannerClick"></common-gallary>
+    <fade-animation>
+      <common-gallary :imgs="gallaryImgs" v-show="showGallary" @gallaryClick="handleBannerClick"></common-gallary>
+    </fade-animation>
   </div>
 </template>
 
 <script>
 import CommonGallary from 'common/gallary/Gallary.vue'
+import FadeAnimation from 'common/fade/Fade.vue'
 export default {
   name: 'DetailBanner',
   components: {
-    CommonGallary
+    CommonGallary,
+    FadeAnimation
   },
   props: {
     sightName: String,
