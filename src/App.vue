@@ -1,7 +1,8 @@
 <template>
   <div id="app">
     <!-- 路由内容被加载之后放入内存，下次直接用不经过钩子函数mounted,但是会用activated -->
-    <keep-alive>
+    <!-- 用exclude来声明不需要keepalive的组件 -->
+    <keep-alive exclude="Detail">
       <router-view/>
     </keep-alive>
   </div>

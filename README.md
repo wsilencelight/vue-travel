@@ -84,3 +84,11 @@ www.iconfont.cn
 
 ## 递归组件
 - 见detail-list的使用
+
+## 不同页面之间的滚动行为的互相影响
+- [vue官网](https://router.vuejs.org/zh/guide/advanced/scroll-behavior.html)
+```
+scrollBehavior (to, from, savedPosition) {
+    // return 期望滚动到哪个的位置
+}
+```
