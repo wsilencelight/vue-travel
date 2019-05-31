@@ -92,3 +92,9 @@ scrollBehavior (to, from, savedPosition) {
     // return 期望滚动到哪个的位置
 }
 ```
+## 阻止页面一些默认行为
+- 比如touchstart.prevent
+
+## 解决一些机型不支持promise
+- npm install babel-polyfill --save
+- import ''

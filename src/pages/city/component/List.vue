@@ -38,7 +38,8 @@ export default {
     letter: String
   },
   mounted () {
-    this.scroll = new Bscroll(this.$refs.warpper)
+    // 这里不加click: true手机上点击会有问题
+    this.scroll = new Bscroll(this.$refs.warpper, {click: true})
   },
   watch: {
     letter () {
